@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "cds-onboarding-general-ml-fundamentals"
+version = "0.1.0"
+description = "This repository contains the associated code for a short talk given on 2022-03-13 to new members of the Cornell Data Science project team. The main focus here will be on general ML fundamentals along with Docker!!"
+authors = ["Zander Wang <zw576@cornell.edu>, Magd Bayoumi <mb2363@cornell.edu>"]
+
+[tool.poetry.dependencies]
+python = "3.8.12"
+jupyter = "^1.0.0"
+numpy = "^1.22.3"
+scikit-learn = "^1.0.2"
+matplotlib = "^3.5.1"
+nbconvert = "^6.4.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0a5"]
+build-backend = "poetry.core.masonry.api"
