@@ -14,10 +14,12 @@ The topics covered include:
 Associated slides for this presentation can be found [here](https://docs.google.com/presentation/d/1oIIrpcFIbrBNpr6Y41UfxtrgGK7sF9TKNVt7QONT2BI/edit?usp=sharing).
 
 
-Two relevant commands:
+Three relevant commands:
 
 ```
-$ sudo docker build --build-arg PORT=5000 -t cds_mar12_onboarding:v2 .
+$ ssh -L <PORT>:localhost:<PORT> onboarding_sp22@128.84.48.78
 
-$ sudo docker run -p 5000:5000 --mount src="$(pwd)",target=/sample_volume,type=bind cds_mar12_onboarding:v2
+$ sudo docker build --build-arg PORT=<PORT> -t cds_mar12_onboarding:<netid> .
+
+$ sudo docker run -p <PORT>:<PORT> --mount src="$(pwd)",target=/sample_volume,type=bind -t -i cds_mar12_onboarding:<netid>
 ```
